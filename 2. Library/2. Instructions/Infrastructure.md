@@ -15,13 +15,8 @@ The file system is organized to separate active work from reference materials:
     - **2. Instructions/**: Context, guides, and this Lab Manual.
     - **3. Workflows/**: Standard operating procedures (SOPs).
 
-## 3. Tool Stack
-- **Operating System**: Windows
-- **Shell**: PowerShell
-- **Version Control**: Git / GitHub
-    - *Status*: Git command not currently detected in the active shell. Configuration needed.
-- **AI Assistant**: Antigravity (Google Deepmind)
-    - Role: Pair programmer, architect, and guide.
+## 3. Core Tool Stack
+The foundational development environment operates on a Windows workstation utilizing PowerShell as the primary command interface. Version control is managed through Git and GitHub to ensure robust code history and collaboration capabilities. The runtime environment is powered by Node.js version 24.13.1 paired with npm version 11.8.0 for efficient package management. AI assistance is provided by Antigravity from Google Deepmind acting as the lead architect and pair programmer.
 
 ## 4. Sync Workflow: "The Vibe Coder Protocol"
 We adhere to the following core principles for all development:
