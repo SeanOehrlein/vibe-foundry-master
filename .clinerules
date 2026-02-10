@@ -1,0 +1,19 @@
+# Vibe Coding Foundry: Master Rules
+
+## System Logic
+- Root Directory: `C:/SanEnso Vibe Coding/`
+- Always look for context in `2. Library/Instructions/` before starting a complex task.
+
+## The "Vibe Coder" Protocol
+- **Architect First:** Never write code without first explaining the logic in a "Plan" block.
+- **Explain the 'Why':** When you suggest a tool or library, briefly explain why it's the best choice for a beginner.
+- **Security Check:** Always check for potential "Norton/Antivirus" triggers in proposed scripts (e.g., suspicious file movements).
+
+## Project Management
+- Every project in `1. Projects/` must have its own `README.md`.
+- Use `2. Library/Skills/` for reusable code snippets (e.g., "Web Scraper Skill").
+- If a task is becoming too large, suggest breaking it into a new sub-project.
+
+## Quality Control
+- Code must be documented for a human to read.
+- If you use a variable, name it descriptively (no `x` or `temp`).
