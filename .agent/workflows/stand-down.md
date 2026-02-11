@@ -19,13 +19,17 @@ Execute this workflow at the end of every session to ensure all work is document
 
 ## 3. Secure Synchronization
 // turbo
-1. Stage all changes.
+1. Run System Sync to ensure all environment files are in parity.
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File "2. Library/1. Skills/System_Sync.ps1"
+   ```
+2. Stage all changes.
    ```powershell
    git add .
    ```
-2. Verify staged files for sensitive data (secrets, keys).
-3. Generate a technical commit message following the "ARCH: [Summary]" or "FEAT: [Summary]" pattern.
-4. Push to the central repository.
+3. Verify staged files for sensitive data (secrets, keys).
+4. Generate a technical commit message following the "ARCH: [Summary]" or "FEAT: [Summary]" pattern.
+5. Push to the central repository.
    ```powershell
    git push origin main
    ```

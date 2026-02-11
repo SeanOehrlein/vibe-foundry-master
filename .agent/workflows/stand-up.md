@@ -6,24 +6,13 @@ description: Automated session initialization for the Vibe Coding Master workspa
 
 Execute this workflow at the start of every session to ensure hardware, dependencies, and git state are synchronized between the desktop and laptop.
 
-## 1. Git Synchronization
+## 1. Automated Sync & Health Check
 // turbo
-1. Fetch latest changes from the origin.
+1. Run the System Sync utility to verify Git state, environment files, and runtimes.
    ```powershell
-   git fetch origin
-   git status
+   powershell -ExecutionPolicy Bypass -File "2. Library/1. Skills/System_Sync.ps1"
    ```
-2. If the local branch is behind, pull the latest changes before proceeding.
-
-## 2. Infrastructure Health Check
-// turbo
-1. Verify core runtime versions.
-   ```powershell
-   node -v
-   npm -v
-   python --version
-   ```
-   *Expected: Node v24.13.1, npm 11.8.0, Python 3.14+*
+2. If any items are [ERR] or [MISSING], resolve them before proceeding.
 
 ## 3. Dependency Management
 // turbo
