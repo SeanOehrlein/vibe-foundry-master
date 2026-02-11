@@ -6,6 +6,7 @@
 - Resolved missing `.env` issue by creating `.env.example` templates and enabling `dotenv` in `Manager/src/index.js`.
 - Formalized the Handoff Protocol by updating `.agent/workflows/stand-up.md` and `stand-down.md`.
 - **Created `System_Sync.ps1`**: Automated check for Git parity, .env keys, and runtimes.
+- **Updated Roadmap**: Recorded sync accomplishments and protocol formalization.
 
 ## System Health
 - **Git**: Fully synced with `origin/main`.
