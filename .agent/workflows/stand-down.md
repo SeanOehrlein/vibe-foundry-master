@@ -30,8 +30,12 @@ Execute this workflow at the end of every session to ensure all work is document
    git push origin main
    ```
 
-## 4. Roadmap Update
-1. Update [Roadmap.md](file:///C:/1.%20SanEnso%20Vibe%20Coding/2.%20Library/2.%20Instructions/Roadmap.md) with the session's accomplishments and define the "Next Stop" for the following session.
+## 5. Handoff Memo
+1. Create or update [Handoff_Memo.md](file:///c:/vibe-foundry-master/2.%20Library/4.%20Research/Handoff_Memo.md).
+2. Document:
+    - **Current Context**: What was being worked on in the last 5 minutes.
+    - **Stubborn Issues**: Any bugs or environment quirks found.
+    - **Next Immediate Action**: The very first thing the next session should do.
 
 ---
 *Status: Session Synchronized and Secured.*
