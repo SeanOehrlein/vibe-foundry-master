@@ -34,12 +34,15 @@ Execute this workflow at the end of every session to ensure all work is document
    git push origin main
    ```
 
-## 5. Handoff Memo
-1. Create or update [Handoff_Memo.md](file:///c:/vibe-foundry-master/2.%20Library/4.%20Research/Handoff_Memo.md).
-2. Document:
+## 5. Handoff & Journaling
+1. **Transient**: Update [Handoff_Memo.md](file:///C:/1.%20SanEnso%20Vibe%20Coding/2.%20Library/4.%20Research/Handoff_Memo.md).
+    - **System ID**: [Foundry-Prime / Foundry-Mobile]
     - **Current Context**: What was being worked on in the last 5 minutes.
-    - **Stubborn Issues**: Any bugs or environment quirks found.
+    - **Structure Status**: [Ready / Needs Reconciliation]
     - **Next Immediate Action**: The very first thing the next session should do.
+2. **Permanent**: Prepend (Top of File) to [Development_Journal.md](file:///C:/1.%20SanEnso%20Vibe%20Coding/2.%20Library/4.%20Research/Development_Journal.md).
+    - **Session ID**: [Date | Time | System ID]
+    - Record Wins, Friction, Architectural Insights, and the session "Vibe".
 
 ---
 *Status: Session Synchronized and Secured.*

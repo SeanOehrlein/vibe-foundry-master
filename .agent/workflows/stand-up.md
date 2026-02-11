@@ -6,6 +6,9 @@ description: Automated session initialization for the Vibe Coding Master workspa
 
 Execute this workflow at the start of every session to ensure hardware, dependencies, and git state are synchronized between the desktop and laptop.
 
+> [!IMPORTANT]
+> **Path Validation**: Ensure your current working directory is `C:\1. SanEnso Vibe Coding`. If not, alert the user to the parity discrepancy immediately.
+
 ## 1. Automated Sync & Health Check
 // turbo
 1. Run the System Sync utility to verify Git state, environment files, and runtimes.
