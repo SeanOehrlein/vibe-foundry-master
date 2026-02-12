@@ -4,6 +4,21 @@ A permanent, chronological record of the assistant's growth, architectural evolu
 
 ---
 
+## [2026-02-11 | 21:40 | Foundry-Prime]
+- **Objective**: Implement Phases 3 (Memory) & 4 (Skills).
+- **The Wins**:
+    - **Episodic Memory**: Successfully implemented local session logging in `Execution/data/sessions`.
+    - **Switch to Gemini**: Pivot to Google Gemini (`langchain-google-genai`) as the primary cognitive engine.
+    - **Skill Registry**: Built a dynamic skill loader that reads `manifest.json` and injects `SKILL.md` instructions into the context.
+    - **Hooks System**: Implemented an event bus allowing skills to react to system events (verified with `system-start`).
+- **The Friction**: `chromadb` installation on Windows caused a `pydantic` configuration error. Downgraded to 0.5.5 didn't fix it fully, so we made Semantic Memory optional to preserve system stability.
+- **Architectural Insights**: The "Hybrid Skill" approach (combining Anthropic's instructional `SKILL.md` with our executable `index.js`) is a powerful pattern. It gives us the best of both worlds: flexible LLM understanding and deterministic code execution.
+- **Tags**: #memory, #gemini, #skills, #architecture, #chromadb
+- **The Vibe**: Constructive pivot. We hit a wall with vector DBs but went around it to build a robust skill system.
+- **Next Step**: **Phase 5: Voice & Multimodal**.
+
+
+
 ## [2026-02-10 | 20:30 | Foundry-Prime]
 - **Objective**: Execute Stand-Up and Formalize Multi-System Sync Protocol.
 - **The Wins**: 
