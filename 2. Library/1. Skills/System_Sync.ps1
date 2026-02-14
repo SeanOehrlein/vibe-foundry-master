@@ -1,7 +1,7 @@
 # Vibe Coding Master: System Sync Utility
 # Automates synchronization checks between Desktop and Laptop environments.
 
-$Root = "c:\vibe-foundry-master"
+$Root = "c:\1. SanEnso Vibe Coding"
 $ProjectsRoot = "$Root\1. Projects\sanenso-personal-ai-assistant"
 
 Write-Host "`n--- [ Vibe Coding Master: System Sync ] ---" -ForegroundColor Cyan
