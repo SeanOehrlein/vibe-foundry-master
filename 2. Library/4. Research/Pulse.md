@@ -3,22 +3,31 @@
 
 ## The Pulse
 **Session**: 2026-02-14 | **System**: Foundry-Prime (Desktop)
-**Status**: Phase 5 (Voice & Multimodal) Initialization.
+**Status**: Phase 5 (Voice & Multimodal) | **NEW:** Phase 4.5 (Governance) & Phase 6 (Sounding Board) integrated.
 
 ### Current Context
-- **Workflows**: Optimized Stand-Up/Down to be "1-Click" using `vibe_init.ps1` and `// turbo-all`.
-- **History**: Merged `Handoff_Memo.md` and `Development_Journal.md` into this file.
-- **Skill Registry**: "Hybrid Skill" pattern (LLM Instructions + Python execution) is stable.
-- **Memory**: Episodic (JSON) is active; Semantic (ChromaDB) is optional.
+- **Workflows**: Hardened `vibe_init.ps1` (abort on dirty) and `stand-down.md` (manual commit messages + health check).
+- **Roadmap**: Expanded to include **Governance & Economics** (Phase 4.5) and **Collaborative Sounding Board** (Phase 6).
+- **API Management**: Explicitly added API Key Resolution to the roadmap to stop auth drift.
 
 ### Immediate Next Steps
-1.  **Voice Interface**: Implement STT (Speech-to-Text) entry point.
-2.  **Multimodal**: Integrate Vision capabilities.
-3.  **Skill Dev**: Build File System and Browser skills.
+1.  **Governance**: Implement `pai_vault.json` and `guardrail.py` (Phase 4.5).
+2.  **API Resolution**: Finalize the .env standardization to prevent drift.
+3.  **Voice Interface**: Begin STT implementation (Phase 5).
+4.  **Collaborative Gem**: Draft the system prompt for the Gemini "Sounding Board" Gem (Phase 6).
 
 ---
 
 ## The Journal
+
+### [2026-02-14 | 08:55 | Foundry-Prime]
+- **Objective**: Harden Infrastructure & Expand Strategic Roadmap.
+- **The Wins**:
+    - **Workflow Hardening**: Red-teamed sync scripts. `vibe_init.ps1` is now "Safety-First" (aborts on dirty repo).
+    - **Roadmap Expansion**: Integrated advanced ideas from Gemini brainstorming (Governance, Project Vaults, Sounding Boards).
+    - **API Stability**: Formalized the plan to resolve recurring API key/auth drift issues.
+- **The Friction**: Initial browser subagent failure on authentication-locked links; pivoted to manual extraction which worked perfectly.
+- **The Vibe**: Strategic. Moving from "getting it to work" to "making it professional and durable."
 
 ### [2026-02-14 | 08:30 | Foundry-Prime]
 - **Objective**: Optimize Project Workflows.

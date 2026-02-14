@@ -20,9 +20,20 @@
 - [x] **Skill Registry**: Implement manifest-based skill loading.
 - [x] **Hooks System**: Setup event-driven automation.
 
+## Phase 4.5: Governance & Economics [NEW]
+- [ ] **Project Vault**: Implement `pai_vault.json` for project-based cost tracking.
+- [ ] **Cost Guardrails**: Build `guardrail.py` and `cost-guardrail.md` skill to meter usage.
+- [ ] **Flash-First Routing**: Architect Manager to route low-complexity tasks to Flash models.
+- [ ] **API Key Resolution**: Standardize key management and resolve authentication drift issues.
+
 ## Phase 5: Voice & Multimodal [NEXT STOP]
+- [ ] **Governance Check**: Integrate cost-guardrails into voice command loops.
 - [ ] Implement Speech-to-Text (STT) interface.
 - [ ] Integrate Vision capability (multimodal input).
+
+## Phase 6: Collaborative Sounding Board [NEW]
+- [ ] **Gemini Gem Integration**: Build a custom "Gem" to act as a specialized architecture and "vibe" sounding board.
+- [ ] **Hybrid Feedback Loop**: Establish a workflow for syncing "Gem" insights back into the Antigravity codebase.
 
 ---
 *Last Sync: 2026-02-10 | Status: Infrastructure aligned, .env templates created, and Handoff Protocol formalized.*

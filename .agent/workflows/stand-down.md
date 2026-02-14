@@ -18,11 +18,23 @@ Execute this workflow at the end of every session to ensure all work is document
    ```powershell
    powershell -ExecutionPolicy Bypass -File "2. Library/1. Skills/vibe_init.ps1"
    ```
-2. Auto-Commit and Push Work.
+2. **Commit Work**:
    ```powershell
    git add .
-   $msg = "WIP: Automated Stand-Down Sync $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
+   $msg = Read-Host "Enter commit message (or Enter for Auto-Sync)"
+   if ([string]::IsNullOrWhiteSpace($msg)) { $msg = "WIP: Automated Stand-Down Sync $(Get-Date -Format 'yyyy-MM-dd HH:mm')" }
    git commit -m $msg
+   ```
+
+## 3. Verification & Push
+1. **Health Check**: Verify system stability before pushing.
+   ```powershell
+   # Run project specific tests here, e.g.:
+   # npm test
+   Write-Host "Ready to push."
+   ```
+2. **Push to Remote**:
+   ```powershell
    git push origin main
    ```
 
