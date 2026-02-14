@@ -48,9 +48,12 @@ class MemoryManager:
         return results['documents'][0] if results['documents'] else []
 
     def get_system_prompt_context(self) -> str:
-        """Construct the system context using Directives and Objectives."""
-        directives_str = "\n".join([f"- {d}" for d in self.directives.get("directives", [])])
-        return f"System Directives:\n{directives_str}\n"
+        """Construct the system context using the root System_Policy.md."""
+        policy_path = os.path.abspath(os.path.join(self.base_path, "..", "System", "Policy", "System_Policy.md"))
+        if os.path.exists(policy_path):
+            with open(policy_path, 'r') as f:
+                return f"CyCOS Prime Directive:\n{f.read()}\n"
+        return "CyCOS Prime Directive: None found."
 
 # Singleton instance for the execution layer
 # Redirecting to root Memory plane
