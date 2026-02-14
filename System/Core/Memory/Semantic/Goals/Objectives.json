@@ -1,0 +1,14 @@
+{
+    "objectives": [
+        {
+            "id": "PHASE_3_COMPLETE",
+            "description": "Establish the stateful core with Episodic and Semantic memory.",
+            "status": "in-progress"
+        },
+        {
+            "id": "foundry_sync_parity",
+            "description": "Maintain perfect folder and script parity between Foundry-Prime and Foundry-Mobile.",
+            "status": "active"
+        }
+    ]
+}

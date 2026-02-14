@@ -3,8 +3,8 @@
 
 $ErrorActionPreference = "Stop"
 $ScriptRoot = $PSScriptRoot
-$WorkspaceRoot = Resolve-Path "$ScriptRoot\..\.."
-$ProjectsRoot = "$WorkspaceRoot\1. Projects\sanenso-personal-ai-assistant"
+$CyCOSRoot = Resolve-Path "$ScriptRoot\..\..\.."
+$ProjectsRoot = "$CyCOSRoot\System\Core"
 
 Write-Host "`n--- [ Vibe Coding Master: Auto-Init ] ---" -ForegroundColor Cyan
 

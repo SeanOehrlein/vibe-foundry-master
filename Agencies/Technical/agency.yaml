@@ -1,0 +1,25 @@
+# CyCOS Agency Manifest - Standard v1.0
+agency_metadata:
+  id: "technical-wing"
+  version: "1.0.0"
+  description: "Core technical capabilities including Vibe Coding, system synchronization, and administrative scripts."
+  owner_plane: "System"
+
+runtime_config:
+  primary_llm: "gemini-1.5-pro" # High reasoning for dev tasks
+  temperature: 0.1 # Low temperature for code precision
+  max_concurrency: 5
+
+capabilities:
+  - "vibe_coding"
+  - "system_sync"
+  - "dependency_management"
+
+permissions:
+  foundry_access: "full"
+  system_memory_access: "read-write"
+  cross_agency_messaging: true
+
+resource_governance:
+  budget_cap_daily: 10.00
+  priority: "high_priority"
