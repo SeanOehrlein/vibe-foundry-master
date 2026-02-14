@@ -10,28 +10,25 @@ To ensure clarity during multi-device synchronization, we recognize two distinct
 - **System Root**: `C:\CyCOS` (Legacy: `C:\1. SanEnso Vibe Coding`)
 - **Status**: Sovereign Operational
 
-## 3. Source of Truth: Directory Structure
-All instances must reconcile against this definitive structure:
+## 3. Sovereign Quad-Plane Structure
+All instances must reconcile against the Sovereign Quad-Plane structure:
 
 ```text
-C:\1. SanEnso Vibe Coding\
-├── .agent/
-│   └── workflows/          # Standard Operating Procedures (stand-up/down)
-├── 1. Projects/
-│   └── sanenso-personal-ai-assistant/
-│       ├── Manager/        # Node.js Orchestrator
-│       ├── Execution/      # Python Inference Layer
-│       ├── Memory/         # Episodic & Semantic Storage
-│       └── Skills/         # Atomic Capabilities
-├── 2. Library/
-│   ├── 1. Skills/          # Global Agent Skills
-│   ├── 2. Instructions/    # Guides & Roadmap
-│   └── 4. Research/        # Handoff Memos, Journal, & Analysis
-├── .clinerules             # Behavioral Triggers
-└── .gitignore              # Version Control Exclusion
+C:\CyCOS\ (SanEnso Vibe Coding)
+├── System/
+│   ├── Core/               # Manager (Node) + Execution (Python)
+│   ├── Policy/             # Universal Law (System_Policy.md)
+│   └── Registry/           # Roadmap, Infrastructure, States
+├── Agencies/
+│   └── Technical/          # Skills, Manifests, Technical Passport
+├── Memory/
+│   ├── LongTerm/           # Research, Pulse, History
+│   └── ShortTerm/          # Logs, Ephemeral State
+└── Foundry/
+    └── Active_Workspaces/  # Ephemeral Project Workspaces
 ```
 
-## 4. Sync Workflow: "The Vibe Coder Protocol"
+## 4. Sync Workflow: "The Sovereign Protocol"
 We adhere to the following core principles:
 
 ### A. Architect First
@@ -40,7 +37,8 @@ We adhere to the following core principles:
 
 ### B. Device Handoff
 - Every session **must** end with a `stand-down` and start with a `stand-up`.
-- The `Handoff_Memo.md` is the primary bridge between **Foundry-Prime** and **Foundry-Mobile**.
+- The `Pulse.md` is the primary bridge between **Foundry-Prime** and **Foundry-Mobile**.
 
 ### C. Security Check
 - Always check for potential security triggers before running automated scripts.
+- Verify the `System/Registry/active_state.json` before any mounting operation.
