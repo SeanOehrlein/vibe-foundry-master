@@ -53,4 +53,7 @@ class MemoryManager:
         return f"System Directives:\n{directives_str}\n"
 
 # Singleton instance for the execution layer
-memory = MemoryManager(base_path=os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Memory")))
+# Redirecting to root Memory plane
+_current_dir = os.path.dirname(__file__)
+root_memory_path = os.path.abspath(os.path.join(_current_dir, "..", "..", "..", "Memory"))
+memory = MemoryManager(base_path=root_memory_path)

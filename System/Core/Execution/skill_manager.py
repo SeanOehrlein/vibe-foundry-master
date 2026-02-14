@@ -74,6 +74,8 @@ class SkillManager:
         ]
 
 # Initialize global SkillManager
-SKILLS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Skills"))
+# Redirecting to root Agencies plane (Technical wing)
+_current_dir = os.path.dirname(__file__)
+SKILLS_PATH = os.path.abspath(os.path.join(_current_dir, "..", "..", "..", "Agencies", "Technical", "Skills"))
 skills = SkillManager(SKILLS_PATH)
 skills.discover_skills()
