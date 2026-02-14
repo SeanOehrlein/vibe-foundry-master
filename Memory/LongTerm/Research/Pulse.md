@@ -1,4 +1,4 @@
-# Vibe Coding Master: Pulse & History
+# CyCOS Prime: Pulse & History
 *The central nervous system of the project. Contains the current state (The Pulse) and the permanent record (The Journal).*
 
 ## The Pulse
@@ -70,7 +70,7 @@
 - **The Friction**: Identified the need for more robust validation as the system scales.
 - **Architectural Insights**: Switched to a **two-tier handoff system** (Transient Memo + Permanent Journal) to ensure both tactical clarity and strategic history.
 - **Alternatives Considered**: We debated whether to keep memory in the Manager or Execution layer; decided on the Execution layer (Python) to leverage the rich AI ecosystem (LangChain/ChromaDB).
-- **Inspiration/References**: Vibe Coding Master Project Blueprint.
+- **Inspiration/References**: CyCOS Project Blueprint.
 - **Tags**: #memory, #skills, #protocol, #history
 - **The Vibe**: Deep flow and structural solidification. High confidence in the new modular foundation.
 - **Next Step**: Build a **"Testing Skill" / "QA Team"** to automate system validation.
@@ -84,6 +84,6 @@
 - **The Friction**: Identified directory naming discrepancies on the laptop which initially caused pathing confusion.
 - **Architectural Insights**: Opted for "Thematic AI Instances" to better orient the agent during handoffs and prevent context fragmentation.
 - **Alternatives Considered**: We considered simple functional names (Desktop/Laptop), but thematic names (Prime/Mobile) strengthen the persona and sense of "central brain" vs "mobile unit".
-- **Inspiration/References**: Refinement of the Vibe Coding Protocol standard.
+- **Inspiration/References**: CyCOS Sovereign Protocol.
 - **Tags**: #sync, #architecture, #persona, #infrastructure
 - **The Vibe**: High-efficiency discovery. Transforming technical friction (syncing) into a formal project asset (the protocol).

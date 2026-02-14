@@ -1,4 +1,4 @@
-# Lab Manual: Infrastructure & Workflow
+# CyCOS Infrastructure & Operational Manual
 
 ## 1. System Identities (Thematic)
 To ensure clarity during multi-device synchronization, we recognize two distinct AI instances:
@@ -7,8 +7,8 @@ To ensure clarity during multi-device synchronization, we recognize two distinct
 
 ## 2. Hardware & Pathing
 - **OS**: Windows
-- **Mandatory Root**: All workspace files **must** reside at `C:\1. SanEnso Vibe Coding` to maintain link and script integrity.
-- **Status**: Operational
+- **System Root**: `C:\CyCOS` (Legacy: `C:\1. SanEnso Vibe Coding`)
+- **Status**: Sovereign Operational
 
 ## 3. Source of Truth: Directory Structure
 All instances must reconcile against this definitive structure:

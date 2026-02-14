@@ -1,7 +1,7 @@
-# SanEnso Personal AI Assistant
+# CyCOS Core Orchestrator
 
 ## Overview
-The **SanEnso Personal AI Assistant** is a modular, multi-language system designed to serve as a robust personal intelligence engine. It leverages a hybrid architecture to combine the event-driven performance of Node.js with the rich AI/ML ecosystem of Python.
+The **CyCOS Core Orchestrator** is the central intelligence engine of the Sovereign Agentic Operating System. It leverages a hybrid architecture to combine the event-driven performance of Node.js with the rich AI/ML ecosystem of Python.
 
 ## Architecture
 This project follows the **Project Blueprint: AI Assistant Core** standard.
