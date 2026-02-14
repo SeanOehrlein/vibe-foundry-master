@@ -11,7 +11,7 @@ Execute this workflow at the start of every session to ensure hardware, dependen
 ## 1. Automated Sync & Self-Healing
 1. Run the Vibe Link to verify Git state, environment, and runtimes.
    ```powershell
-   powershell -ExecutionPolicy Bypass -File "2. Library/1. Skills/vibe_init.ps1"
+   powershell -ExecutionPolicy Bypass -File "Agencies/Technical/Skills/vibe_init.ps1"
    ```
 
 ## 2. Context Retrieval

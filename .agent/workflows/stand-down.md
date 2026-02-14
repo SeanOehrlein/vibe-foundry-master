@@ -16,7 +16,7 @@ Execute this workflow at the end of every session to ensure all work is document
 ## 2. Secure Synchronization
 1. Run System Sync to ensure environment parity before pushing.
    ```powershell
-   powershell -ExecutionPolicy Bypass -File "2. Library/1. Skills/vibe_init.ps1"
+   powershell -ExecutionPolicy Bypass -File "Agencies/Technical/Skills/vibe_init.ps1"
    ```
 2. **Commit Work**:
    ```powershell
