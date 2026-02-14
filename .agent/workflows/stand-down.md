@@ -1,15 +1,15 @@
 ---
-description: Automated session termination and synchronization for the Vibe Coding Master workspace.
+description: Automated session termination and synchronization for the CyCOS Sovereign Agentic Operating System.
 ---
 
-# Stand-Down Protocol: Cleanup & Sync
+# CyCOS Stand-Down: Sovereign Synchronization
 
 // turbo-all
 
 Execute this workflow at the end of every session to ensure all work is documented, verified, and pushed to the central repository.
 
 ## 1. Pulse Check
-1. **Critical**: Open [Pulse.md](file:///c:/1.%20SanEnso%20Vibe%20Coding/2.%20Library/4.%20Research/Pulse.md).
+1. **Critical**: Open [Pulse.md](file:///C:/CyCOS/Memory/LongTerm/Research/Pulse.md).
 2. Update the "Current Context" section with what you just finished.
 3. Add a new entry to "The Journal" with the current timestamp.
 

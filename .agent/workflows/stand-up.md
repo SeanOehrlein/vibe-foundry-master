@@ -1,8 +1,8 @@
 ---
-description: Automated session initialization for the Vibe Coding Master workspace.
+description: Automated session initialization for the CyCOS Sovereign Agentic Operating System.
 ---
 
-# Stand-Up Protocol: Initialization & Sync
+# CyCOS Stand-Up: Sovereign Alignment
 
 // turbo-all
 
@@ -15,9 +15,9 @@ Execute this workflow at the start of every session to ensure hardware, dependen
    ```
 
 ## 2. Context Retrieval
-1. Read the [Pulse.md](file:///c:/1.%20SanEnso%20Vibe%20Coding/2.%20Library/4.%20Research/Pulse.md) for the latest system state and session history.
-2. Read the [Roadmap.md](file:///c:/1.%20SanEnso%20Vibe%20Coding/2.%20Library/2.%20Instructions/Roadmap.md) to identify the current Phase and Active Tasks.
-3. Read the active project [README.md](file:///c:/1.%20SanEnso%20Vibe%20Coding/1.%20Projects/sanenso-personal-ai-assistant/README.md).
+1. Read the [Pulse.md](file:///C:/CyCOS/Memory/LongTerm/Research/Pulse.md) for the latest system state and session history.
+2. Read the [Roadmap.md](file:///C:/CyCOS/System/Registry/Roadmap.md) to identify the current Phase and Active Tasks.
+3. Read the CyCOS Core [README.md](file:///C:/CyCOS/System/Core/README.md).
 
 ---
 *Status: Ready for Development.*
