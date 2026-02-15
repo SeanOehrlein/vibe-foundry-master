@@ -25,9 +25,8 @@ Execute this workflow at the end of every session to ensure all work is document
 2. **Commit Work**:
    ```powershell
    git add .
-   $msg = Read-Host "Enter commit message (or Enter for Auto-Sync)"
-   if ([string]::IsNullOrWhiteSpace($msg)) { $msg = "WIP: Automated Stand-Down Sync $(Get-Date -Format 'yyyy-MM-dd HH:mm')" }
-   git commit -m $msg
+   $timestamp = Get-Date -Format 'yyyy-MM-dd HH:mm'
+   git commit -m "WIP: Automated Stand-Down Sync $timestamp"
    ```
 
 ## 3. Verification & Push
