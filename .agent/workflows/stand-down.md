@@ -12,6 +12,10 @@ Execute this workflow at the end of every session to ensure all work is document
 1. **Critical**: Open [Pulse.md](file:///C:/CyCOS/Memory/LongTerm/Research/Pulse.md).
 2. Update the "Current Context" section with what you just finished.
 3. Add a new entry to "The Journal" with the current timestamp.
+4. **Archive Old Sessions**: Run the Pulse Curator to maintain token efficiency.
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File "Agencies/Technical/Skills/pulse_curator.ps1"
+   ```
 
 ## 2. Secure Synchronization
 1. Run System Sync to ensure environment parity before pushing.

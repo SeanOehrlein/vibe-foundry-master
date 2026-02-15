@@ -1,0 +1,28 @@
+{
+    "name": "cycos-token-dashboard",
+    "version": "1.0.0",
+    "description": "Security-first token usage monitoring for CyCOS operational intelligence",
+    "type": "module",
+    "main": "src/index.js",
+    "scripts": {
+        "dashboard": "node src/index.js",
+        "status": "node src/status.js"
+    },
+    "bin": {
+        "cycos-token-status": "./bin/cycos-token-status.js"
+    },
+    "keywords": [
+        "cycos",
+        "token-monitoring",
+        "operational-intelligence"
+    ],
+    "author": "CyCOS",
+    "license": "PRIVATE",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "better-sqlite3": "^12.6.2",
+        "glob": "^13.0.3"
+    }
+}

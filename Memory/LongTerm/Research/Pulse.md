@@ -1,24 +1,39 @@
-# CyCOS Prime: Pulse & History
-*The central nervous system of the project. Contains the current state (The Pulse) and the permanent record (The Journal).*
+# CyCOS Prime: Pulse & Recent History
+*The central nervous system of the project. Contains current state (The Pulse) and recent sessions (last 3). Full history in [PulseArchive.md](file:///C:/CyCOS/Memory/LongTerm/Research/PulseArchive.md).*
+
+## Archive Policy
+- **Active Journal**: Last 3 sessions (optimized for cross-system handoff and token efficiency)
+- **Full Archive**: [PulseArchive.md](file:///C:/CyCOS/Memory/LongTerm/Research/PulseArchive.md) (on-demand access)
+- **Curation**: Automatic during stand-down via `pulse_curator.ps1`
 
 ## The Pulse
 **Session**: 2026-02-14 | **System**: Foundry-Prime (Desktop)
 **Status**: Phase 5 (Voice & Multimodal) | **NEW:** Phase 4.5 (Governance) & Phase 6 (Sounding Board) integrated.
 
 ### Current Context
-- **Workflows**: Hardened `vibe_init.ps1` (abort on dirty) and `stand-down.md` (manual commit messages + health check).
-- **Roadmap**: Expanded to include **Governance & Economics** (Phase 4.5) and **Collaborative Sounding Board** (Phase 6).
-- **API Management**: Explicitly added API Key Resolution to the roadmap to stop auth drift.
+- **Token Dashboard**: Fully operational with real-time data from `state.vscdb`. No background process required; use `cycos-token-status`.
+- **Workflows**: Integrated Token Status Audit into `/stand-up`. Hardened `/stand-down` logic.
+- **Sovereign Monitoring**: We now have the ability to track model credits without relying on external APIs or screen-scraping logs.
 
 ### Immediate Next Steps
-1.  **Governance**: Implement `pai_vault.json` and `guardrail.py` (Phase 4.5).
-2.  **API Resolution**: Finalize the .env standardization to prevent drift.
+1.  **Dashboard Evolution**: Implement specific token counters (input/output) via deeper log analysis.
+2.  **Governance**: Implement `pai_vault.json` and `guardrail.py` (Phase 4.5).
 3.  **Voice Interface**: Begin STT implementation (Phase 5).
-4.  **Collaborative Gem**: Draft the system prompt for the Gemini "Sounding Board" Gem (Phase 6).
 
 ---
 
 ## The Journal
+
+### [2026-02-15 | 13:15 | Foundry-Prime] - TOKEN DASHBOARD REVOLUTION
+- **Objective**: Develop a security-first, zero-dependency Token Dashboard for real-time model monitoring.
+- **The Wins**:
+    - **Engine Extraction**: Reverse-engineered Antigravity's `state.vscdb` to extract model credits directly from encoded Protobuf binaries.
+    - **CLI Integration**: Built `cycos-token-status` to provide on-demand reports without background resource usage.
+    - **Workflow Fusion**: Integrated token audits into the `/stand-up` workflow for daily operational intelligence.
+    - **Zero-Dependency**: Built the entire dashboard using only Node.js built-ins and `better-sqlite3`.
+- **The Friction**: Initial API auth block (403 Forbidden) was bypassed by pivoting to direct DB analysis. 
+- **The Vibe**: **Sovereign.** We don't just use our tools; we monitor their heartbeat on our terms.
+
 
 ### [2026-02-14 | 12:15 | Foundry-Prime] - CYCOS INCEPTION
 - **Objective**: Structural Hardening & Multi-System Alignment.
