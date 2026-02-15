@@ -11,9 +11,9 @@
 **Status**: Phase 5 (Voice & Multimodal) | **NEW:** Phase 4.5 (Governance) & Phase 6 (Sounding Board) integrated.
 
 ### Current Context
-- **Token Dashboard**: Fully operational with real-time data from `state.vscdb`. No background process required; use `cycos-token-status`.
-- **Workflows**: Integrated Token Status Audit into `/stand-up`. Hardened `/stand-down` logic.
-- **Sovereign Monitoring**: We now have the ability to track model credits without relying on external APIs or screen-scraping logs.
+- **Token Dashboard**: [REVERTED] Dashboard removed due to low utility in current phase.
+- **Workflows**: Reverted Token Status Audit from `/stand-up`.
+- **Sovereign Monitoring**: Pivoting back to manual API/Log verification as needed.
 
 ### Immediate Next Steps
 1.  **Dashboard Evolution**: Implement specific token counters (input/output) via deeper log analysis.
