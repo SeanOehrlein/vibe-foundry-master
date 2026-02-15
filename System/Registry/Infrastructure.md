@@ -20,7 +20,9 @@ C:\CyCOS\ (SanEnso Vibe Coding)
 │   ├── Policy/             # Universal Law (System_Policy.md)
 │   └── Registry/           # Roadmap, Infrastructure, States
 ├── Agencies/
-│   └── Technical/          # Skills, Manifests, Technical Passport
+│   ├── Technical/          # Skills, Manifests, Technical Passport
+│   ├── Strategic/          # "The Executive Suite" (CEO/COO Roles)
+│   └── AdHoc/              # [Dynamic] Temporary Task Forces
 ├── Memory/
 │   ├── LongTerm/           # Research, Pulse, History
 │   └── ShortTerm/          # Logs, Ephemeral State
@@ -42,3 +44,8 @@ We adhere to the following core principles:
 ### C. Security Check
 - Always check for potential security triggers before running automated scripts.
 - Verify the `System/Registry/active_state.json` before any mounting operation.
+
+### D. Ad Hoc Orchestration
+- **Creation**: Temporary agencies (`Agencies/AdHoc/<Project>`) are spawned for complex cross-domain tasks.
+- **Management**: Oversought by the **Strategic Agency** (COO Persona).
+- **Lifecycle**: Must be explicitly "Promoted" to a standing agency or "Dissolved" upon completion.
