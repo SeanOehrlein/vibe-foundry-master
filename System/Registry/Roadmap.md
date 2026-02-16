@@ -12,7 +12,19 @@
 - [x] **Inter-Process Communication**: Implemented Axios-based bridge and verified connectivity on ports 3000 and 8000.
 - [x] **Session Automation**: Implemented `/stand-up` and `/stand-down` workflows in `.agent/workflows`.
 
-## Phase 3: Memory & State [COMPLETED]
+## Phase 2.5: Operations Agency [EXECUTION]
+**Objective**: Establish the "Executive Office" to manage the user's schedule, logistics, and health.
+- [x] **Agency Scaffold**: Created `Agencies/Operations` and defined mission.
+- [x] **Executive Assistant**: Defined `Executive_Assistant.md` for business logistics.
+- [x] **Personal Assistant**: Defined `Personal_Assistant.md` for life/health management.
+- [x] **Chief of Staff Upgrade**: Redefined `CoS.md` as the bridge between Strategy and Operations.
+- [ ] **PAI Integration**: Implement "Hooks" and "Goals" (TELOS) for the Operations Agency.
+- [ ] **Focus Nudge**: Operations Placeholder for session-based "Stay on Target" reminders.
+
+## Phase 3: Connectivity & Automation [PLANNED] / [PARTIAL]
+**Objective**: Enable CyCOS to "plug in" to the external world via standardized protocols.
+- [ ] **Model Context Protocol (MCP)**: Implement MCP Client support to standardize tool connections (GitHub, G-Drive, Filesystem).
+- [ ] **Advanced Hooks**: Expand the event-driven system to support Agency-specific triggers (e.g., "Financial Report Arrived" -> EA Wakeup).
 - [x] **Episodic Memory**: Implement session-based context handling.
 - [x] **Semantic Memory**: Initialize SQLite/Vector Database for long-term RAG.
 
@@ -23,6 +35,7 @@
 ## Phase 4.5: Governance & Economics [NEW]
 - [ ] **Project Vault**: Implement `pai_vault.json` for project-based cost tracking.
 - [ ] **Cost Guardrails**: Build `guardrail.py` and `cost-guardrail.md` skill to meter usage.
+- [ ] **CyCOS Bloat Check**: Weekly Strategic Audit by CoS to divest focus/projects if system becomes becoming unwieldy.
 - [ ] **Flash-First Routing**: Architect Manager to route low-complexity tasks to Flash models.
 - [ ] **API Key Resolution**: Standardize key management and resolve authentication drift issues.
 
@@ -37,9 +50,13 @@
 - [x] **Context Awareness**: (Future) Enable the Copilot to understand the *type* of task (Planning vs. Execution).
 - [x] **Governance Integration**: Enforce Copilot recommendations via `.clinerules`.
 
-## Phase 7: Strategic Skill Acquisition [CURRENT PRIORITY]
-**Objective**: empower the "Generalist" persona with high-impact capabilities by auditing and importing best-in-class tools.
-- [ ] **Skill Scout**: Audit external skill repositories (e.g., Google/Anthropic) for high-value tools.
+## Phase 7: Strategic Reconnaissance (Repo Recon) [COMPLETED]
+**Objective**: Empower the Research Agency to analyze external repositories for patterns, tools, and intelligence.
+- [x] **Repo Recon Design**: Created `implementation_plan.md`.
+- [x] **Scout Agent**: Built `scout.py` (Flash-based) for metadata analysis and "Queue" creation.
+- [x] **Surgeon Toolkit**: Built `surgeon.py` (Fetcher) for "Clean Room" file extraction.
+- [x] **Research Lab**: Established `Foundry/Research` with "Airlock" protocol via tool logic.
+- [ ] **Pattern Extraction**: Protocol to integrate external "Vibes" (Architectural patterns) into CyCOS.
 - [ ] **Skill Adaptor**: Create a standardized process to import external skills into `Agencies/Technical/Skills`.
 - [ ] **Vision Integration**: Implement Multimodal Vision as a core skill for the Copilot.
 
@@ -49,11 +66,11 @@
 - [ ] **Specialists**: Define `Academic.md`, `Executive.md`, and `Generic.md`.
 - [ ] **Context Switching**: Fluidly transition from Divergent (Brainstorming) to Convergent (Drafting) without losing context.
 
-## Phase 9: The Strategic Uplink [ACTIVE]
+## Phase 9: The Strategic Uplink [COMPLETED]
 **Objective**: Connect the capable system to an external "Architect" via a cloud-synced Drop Zone.
-- [x] **Config**: Identified Google Drive path (`G:\My Drive\CyCOS_Incoming`).
-- [/] **Link**: Establish Junction between Local `Incoming` and Drive. (In Progress)
-- [ ] **Watcher**: Build `process_strategy.js` to monitor the Drive folder.
+- [x] **Config**: Identified Google Drive path (`G:\My Drive\00_CYCOS_BRAIN`).
+- [x] **Brain Link**: Establish Junction `c:\CyCOS\Foundry\Brain` <-> `G:\My Drive\00_CYCOS_BRAIN`.
+- [x] **Smart Ingestor**: Upgrade `process_strategy.js` with Gemini Flash (Ready for Key).
 - [ ] **Ingestor**: Parse `advice_*.txt` and update `Pulse.md`.
 
 - [x] **Architecture Pivot**: Restructure directories to `System/`, `Agencies/`, `Memory/`, and `Foundry/`.

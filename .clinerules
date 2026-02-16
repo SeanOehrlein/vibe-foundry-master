@@ -25,3 +25,8 @@
 **Action**:
 1. Always update `Pulse.md` with the "Current Context".
 2. Ensure the "Next Steps" in `task.md` are actionable for a stateless agent.
+
+## Economic Governance
+1. **Frugality First**: Always prioritize the most cost-effective model for the task. Use Gemini Flash for classification and routing. Only use Pro/Ultra for complex reasoning.
+2. **Token Stewardship**: Do not overload context with unnecessary files. Use ead_file sparingly and precisely.
+3. **Bloat Prevention**: Before building new infrastructure, check the ParkingLot and Roadmap to ensure alignment.

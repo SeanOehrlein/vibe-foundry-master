@@ -14,11 +14,8 @@ Execute this workflow at the start of every session to ensure hardware, dependen
    powershell -ExecutionPolicy Bypass -File "Agencies/Technical/Skills/vibe_init.ps1"
    ```
 
-## 2. Context Retrieval
+## 2. Quick Context
 1. Read the [ActiveState.md](file:///C:/CyCOS/System/Registry/ActiveState.md) for current system status and mission.
-2. Read the [Pulse.md](file:///C:/CyCOS/Memory/LongTerm/Research/Pulse.md) for recent session history (last 3 sessions).
-3. Read the [Roadmap.md](file:///C:/CyCOS/System/Registry/Roadmap.md) to identify the current Phase and Active Tasks.
-4. Read the CyCOS Core [README.md](file:///C:/CyCOS/System/Core/README.md).
 
 ---
 *Status: Ready for Development.*
