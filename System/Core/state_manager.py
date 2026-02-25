@@ -18,7 +18,7 @@ class StateManager:
         state = self.get_state()
         if "error" in state: return state["error"]
         
-        # Foundry workspaces are in Foundry/Active_Workspaces/
+        # Foundry workspaces are in Workbench/Active_Workspaces/
         workspace_path = self.root / "Foundry" / "Active_Workspaces" / workspace_name
         
         # Check if it's a System path for core work

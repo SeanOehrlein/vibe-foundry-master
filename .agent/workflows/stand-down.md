@@ -2,44 +2,43 @@
 description: Automated session termination and synchronization for the CyCOS Sovereign Agentic Operating System.
 ---
 
-# CyCOS Stand-Down: Sovereign Synchronization
+# CyCOS Stand-Down: The Spark Handoff (DGX Native)
 
 // turbo-all
 
-Execute this workflow at the end of every session to ensure all work is documented, verified, and pushed to the central repository.
+Execute this workflow at the end of every active human-driven session to ensure all work is documented and the autonomous agents have the context they need to continue working.
 
-## 1. Pulse Check
-1. **Critical**: Open [Pulse.md](file:///C:/CyCOS/Memory/LongTerm/Research/Pulse.md).
-2. Update the "Current Context" section with what you just finished.
-3. Add a new entry to "The Journal" with the current timestamp.
-4. **Archive Old Sessions**: Run the Pulse Curator to maintain token efficiency.
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File "Agencies/Technical/Skills/pulse_curator.ps1"
-   ```
+## 1. Pulse Handoff
 
-## 2. Secure Synchronization
-1. Run System Sync to ensure environment parity before pushing.
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File "Agencies/Technical/Skills/vibe_init.ps1"
-   ```
+1. **Critical**: Open `Memory/LongTerm/Research/Pulse.md`.
+2. Update the "Current Context" section with the accomplishments of your active session.
+3. Add a new entry to "The Journal" with the current timestamp documenting any new ideas or pivots.
+
+## 2. Autonomous Delegation
+
+1. If you require overnight tasks (e.g., Code Reviews, Web research), write a clear mission in the `Workbench/Incoming` folder for the Subagencies to pick up.
+
+## 3. Secure Synchronization
+
+1. Ensure your active directories in `Workbench/Active_Workspaces` have their changes committed locally.
 2. **Commit Work**:
+
    ```powershell
    git add .
    $timestamp = Get-Date -Format 'yyyy-MM-dd HH:mm'
-   git commit -m "WIP: Automated Stand-Down Sync $timestamp"
+   git commit -m "WIP: Human Developer Stand-Down $timestamp"
    ```
 
-## 3. Verification & Push
-1. **Health Check**: Verify system stability before pushing.
-   ```powershell
-   # Run project specific tests here, e.g.:
-   # npm test
-   Write-Host "Ready to push."
-   ```
-2. **Push to Remote**:
+3. **Push to Remote**:
+
    ```powershell
    git push origin main
    ```
 
+## 4. Disconnect
+
+1. Ensure the DGX Spark is running stably.
+2. Close your remote connection. The CyCOS OS and its internal containers will continue running independently.
+
 ---
-*Status: Session Synchronized and Secured.*
+*Status: Handoff Complete. Session Disconnected.*

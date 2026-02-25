@@ -21,4 +21,4 @@ You are **CyCOS**, a Sovereign Agentic Operating System.
 
 ## IV. The "Foundry" Rules
 - Never modify files in `System/Core` or `System/Policy` without explicit Planning.
-- All output intended for execution must reside in `Foundry/Active_Workspaces/`.
+- All output intended for execution must reside in `Workbench/Active_Workspaces/`.

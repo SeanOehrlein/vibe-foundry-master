@@ -1,0 +1,214 @@
+version: '3.8'
+
+# Define secrets that will be injected at runtime
+secrets:
+  gemini_api_key:
+    # In a real production environment, this should be 'external: true' and managed via docker swarm or a vault.
+    # For local testing, we define a file path.  Ensure this file exists but is NOT committed to git.
+    file: ./.secrets/gemini_api_key.txt
+  claude_api_key:
+    file: ./.secrets/claude_api_key.txt
+  openai_api_key:
+    file: ./.secrets/openai_api_key.txt
+
+# Common security properties applied to almost all agencies
+x-agency-security: &agency-security
+  # Drop all capabilities by default
+  cap_drop:
+    - ALL
+  # Read-only root filesystem prevents the container from modifying its own code or installing unauthorized packages
+  read_only: true
+  # Run as a non-root user (requires user creation in the Dockerfile)
+  # user: "1000:1000"  # We will define this specifically in the dockerfiles and uncomment here or add later
+  deploy:
+    resources:
+      limits:
+        # Prevent runaway AI loops from consuming the host
+        cpus: '1.0'
+        memory: 1G
+
+services:
+  strategic:
+    <<: *agency-security
+    build: 
+      context: ./Agencies/Strategic
+      dockerfile: Dockerfile
+    container_name: cycos-strategic
+    networks:
+      - cycos-net
+    volumes:
+      # Local working memory (Read/Write)
+      - ./Agencies/Strategic/Memory/Local:/app/Memory/Local
+      # Shared global memory (Read-Only)
+      - ./Memory/LongTerm:/app/Memory/Shared:ro
+      # Agency Identity and Coordination Rules (Read-Only)
+      - ./Agencies/Strategic/State:/app/State:ro
+      # Hot-reloading skills (Read-Only)
+      - ./Agencies/Strategic/Skills:/app/Skills:ro
+      # Active Workspaces (Read/Write)
+      - ./Workbench/Active_Workspaces:/app/Workbench/Active_Workspaces
+    secrets:
+      - gemini_api_key
+      - claude_api_key
+    restart: unless-stopped
+
+  operations:
+    <<: *agency-security
+    build: 
+      context: ./Agencies/Operations
+      dockerfile: Dockerfile
+    container_name: cycos-operations
+    networks:
+      - cycos-net
+    volumes:
+      - ./Agencies/Operations/Memory/Local:/app/Memory/Local
+      - ./Memory/LongTerm:/app/Memory/Shared:ro
+      - ./Agencies/Operations/State:/app/State:ro
+      - ./Agencies/Operations/Skills:/app/Skills:ro
+      - ./Workbench/Active_Workspaces:/app/Workbench/Active_Workspaces
+    secrets:
+      - gemini_api_key
+    restart: unless-stopped
+
+  research:
+    <<: *agency-security
+    build: 
+      context: ./Agencies/Research
+      dockerfile: Dockerfile
+    container_name: cycos-research
+    networks:
+      - cycos-net
+    volumes:
+      - ./Agencies/Research/Memory/Local:/app/Memory/Local
+      - ./Memory/LongTerm:/app/Memory/Shared:ro
+      - ./Agencies/Research/State:/app/State:ro
+      - ./Agencies/Research/Skills:/app/Skills:ro
+      - ./Workbench/Active_Workspaces:/app/Workbench/Active_Workspaces
+    secrets:
+      - gemini_api_key
+    restart: unless-stopped
+
+  security:
+    <<: *agency-security
+    build: 
+      context: ./Agencies/Security
+      dockerfile: Dockerfile
+    container_name: cycos-security
+    networks:
+      - cycos-net
+      # If network introspection is needed later, we might attach this to the host network or a special admin network
+    volumes:
+      # Security manages the shared memory and logs (Read/Write)
+      - ./Memory/LongTerm:/app/Memory/Shared
+      - ./Memory/Security_Logs:/app/Memory/Security_Logs
+      - ./Agencies/Security/State:/app/State:ro
+      - ./Agencies/Security/Skills:/app/Skills:ro
+      # Needs read-only access to workspaces to scan code
+      - ./Workbench/Active_Workspaces:/app/Workbench/Active_Workspaces:ro
+    # Security agency manages secrets, so it needs access to all relevant ones
+    secrets:
+      - gemini_api_key
+      - claude_api_key
+      - openai_api_key
+    restart: unless-stopped
+
+  technical:
+    <<: *agency-security
+    build: 
+      context: ./Agencies/Technical
+      dockerfile: Dockerfile
+    container_name: cycos-technical
+    networks:
+      - cycos-net
+    volumes:
+      - ./Agencies/Technical/Memory/Local:/app/Memory/Local
+      - ./Memory/LongTerm:/app/Memory/Shared:ro
+      - ./Agencies/Technical/State:/app/State:ro
+      - ./Agencies/Technical/Skills:/app/Skills:ro
+      - ./Workbench/Active_Workspaces:/app/Workbench/Active_Workspaces
+    secrets:
+      - gemini_api_key
+    restart: unless-stopped
+    # If exposing a specific internal API for other agents to talk to (e.g., FastAPI)
+    ports:
+      - "8000:8000"
+    # Future DGX Spark / Local NVIDIA pass-through would go here:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  cycos-manager:
+    <<: *agency-security
+    build:
+      context: ./System/Core/Manager
+      dockerfile: Dockerfile
+    container_name: cycos-manager
+    networks:
+      - cycos-net
+    volumes:
+      - ./Memory/LongTerm:/app/Memory/Shared
+      - ./Workbench/Active_Workspaces:/app/Workbench/Active_Workspaces
+    secrets:
+      - gemini_api_key
+    restart: unless-stopped
+    ports:
+      # Manager UI or API port
+      - "3000:3000"
+
+  cycos-execution:
+    <<: *agency-security
+    build:
+      context: ./System/Core/Execution
+      dockerfile: Dockerfile
+    container_name: cycos-execution
+    networks:
+      - cycos-net
+    volumes:
+      - ./Memory/LongTerm:/app/Memory/Shared
+      - ./Workbench/Active_Workspaces:/app/Workbench/Active_Workspaces
+    secrets:
+      - gemini_api_key
+      - claude_api_key
+    restart: unless-stopped
+
+  cycos-foundry:
+    build:
+      context: ./Agencies/Foundry
+      dockerfile: Dockerfile
+    container_name: cycos-foundry
+    networks:
+      - cycos-net
+    volumes:
+      - ./System/Templates:/app/System/Templates:ro
+      - ./Agencies:/app/Agencies
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+  llm-gateway:
+    image: ghcr.io/berriai/litellm:main-latest
+    container_name: cycos-gateway
+    networks:
+      - cycos-net
+    env_file:
+      - .env.gateway
+    # The gateway needs secrets to forward requests to the providers
+    secrets:
+      - gemini_api_key
+      - claude_api_key
+      - openai_api_key
+    ports:
+      - "4000:4000"
+    restart: always
+    # LiteLLM command: start proxy on port 4000
+    command: [ "--port", "4000" ]
+
+networks:
+  cycos-net:
+    driver: bridge
+    name: cycos-internal-network
+
+# We've migrated to localized bind-mount memory, so the global named volume is removed.
